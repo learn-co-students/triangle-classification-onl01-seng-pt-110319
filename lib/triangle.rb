@@ -1,3 +1,7 @@
 class Triangle
-  # write code here
+  attraccessor :equilateral, :isosceles, :scalene
+
+ class TriangleError < StandardError
+
+ end
 end
