@@ -28,6 +28,8 @@ class Triangle
         @kind = :equilateral
       elsif ( @sidea == @sideb && @sideb != @sidec )||( @sidea == @sidec && @sideb != @sidec )!!( @sidec == @sideb && @sideb != @sidea )
         @kind = :isoceles
+      elsif ( @sidea != @sideb && @sideb != @sidec && @sidec!= @sidea)
+        @kind = 
   end
       
 end
