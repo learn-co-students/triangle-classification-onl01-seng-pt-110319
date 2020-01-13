@@ -29,7 +29,15 @@ class Triangle
       elsif ( @sidea == @sideb && @sideb != @sidec )||( @sidea == @sidec && @sideb != @sidec )!!( @sidec == @sideb && @sideb != @sidea )
         @kind = :isoceles
       elsif ( @sidea != @sideb && @sideb != @sidec && @sidec!= @sidea)
-        @kind = 
+        @kind = :scalene
+      end
+    end
+  end
+  
+  def TriangleError < StandardError
+    def message
+     
+    end
   end
       
 end
