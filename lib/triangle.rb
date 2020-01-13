@@ -1,17 +1,16 @@
 class Triangle
   # write code here
-  attr_accessor :sidea, :sideb, :sidec, :kind
+  attr_reader :sidea, :sideb, :sidec
   
-  def initiliaze(sidea, sideb, sidec)
+  def initialize(sidea, sideb, sidec)
     @sidec = sidec
     @sideb = sideb
     @sidea = sidea
   end
-  
   def self.valid?
-    valid = true
+    valid = false
     if (((@sidea + @sideb) < @sidec) ||  ((@sidea + @sidec) < @sideb) ||  ((@sidec + @sideb) < @sidea))
-      valid = false
+     if @sidea > 0 && sideb > 0 && sidec valid = false
     end
     valid
   end
@@ -23,10 +22,11 @@ class Triangle
       rescue TriangleError => error
             puts error.message
       end
+      @kind = :invalid
     else
       if ( @sidea == @sideb && @sideb == @sidec )
         @kind = :equilateral
-      elsif ( @sidea == @sideb && @sideb != @sidec )||( @sidea == @sidec && @sideb != @sidec )!!( @sidec == @sideb && @sideb != @sidea )
+      elsif ( @sidea == @sideb && @sideb != @sidec )||( @sidea == @sidec && @sideb != @sidec )||( @sidec == @sideb && @sideb != @sidea )
         @kind = :isoceles
       elsif ( @sidea != @sideb && @sideb != @sidec && @sidec!= @sidea)
         @kind = :scalene
@@ -34,10 +34,11 @@ class Triangle
     end
   end
   
-  def TriangleError < StandardError
+  class TriangleError < StandardError
     def message
      
     end
   end
+  
       
 end
